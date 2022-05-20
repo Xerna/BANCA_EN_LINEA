@@ -35,7 +35,7 @@ include('main.php')
             <p class="fs-5 text-success">$<?php echo $datos['fondos'];?></p>
         </div>
         <div class="text-end">
-        <a href="movimientos.php" class="fw-lighter fs-6 text-end text-dark outline text-decoration-none text-capitalize">ver movimientos</a>
+        <a href="movimientos_view.php" class="fw-lighter fs-6 text-end text-dark outline text-decoration-none text-capitalize">ver movimientos</a>
         </div>
     </main>
     <hr class="mx-auto col-8 mt-5">

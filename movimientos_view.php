@@ -1,4 +1,5 @@
 <?php 
+include('main.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,15 +17,40 @@
     <a class="navbar-brand text-light pb-0 mb-0">BANCA EN LINEA</a>
     <ul class="navbar-nav text-light">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-light d-flex align-items-center justify-content-between" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-light d-flex align-items-center justify-content-between" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <span class="pr-3"><?php echo $datos['nombre']." ".$datos['apellido'];?></span>&nbsp;&nbsp;
           <i class="bi bi-person-circle" style="font-size: 1.2rem; color:white"></i>
           </a>
-          <ul class="dropdown-menu bg-light text-light" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu bg-light text-light" aria-labelledby="navbarDropdown2">
             <li><a class="dropdown-item" href="#">CERRAR SESION</a></li>
           </ul>
     </ul>
   </div>
 </nav>
+<div class="tittle mt-3 h-4 d-flex justify-content-evenly">
+  <a href="main_view.php"><i class="bi bi-arrow-left" style="font-size: 1.25rem; color:black"></i></a>
+  <h6 class="text-center "style="font-size: 1.25rem">MOVIMIENTOS</h3>
+</div>
+
+<main id="main" class="container mt-3 mx-auto shadow-sm p-3 col-11">
+            <div class="movimiento-item row d-flex align-items-center">
+                <div class="col-8">
+                <p class="fs-6 text-success mb-0">TITULO DE MOVIMIENTO</p>
+                <p class="text-muted mt-0" style="font-size: 0.8rem;">fecha dd/mm/yyyyy</p>
+                </div>
+                <div class="col-1">
+                    <p class="fs-4">$5.00</p>
+                </div>
+            </div>
+            <div class="movimiento-item row d-flex align-items-center">
+                <div class="col-8">
+                <p class="fs-6 text-danger mb-0">TITULO DE MOVIMIENTO</p>
+                <p class="text-muted mt-0" style="font-size: 0.8rem;">fecha dd/mm/yyyyy</p>
+                </div>
+                <div class="col-1">
+                    <p class="fs-4">$5.00</p>
+                </div>
+            </div>    
+</main>
 </body>
 </html>
