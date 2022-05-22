@@ -1,5 +1,5 @@
 <?php 
-include('main.php')
+include('movimientos.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,24 +33,26 @@ include('main.php')
 </div>
 
 <main id="main" class="container mt-3 mx-auto shadow-sm p-3 col-11">
-            <div class="movimiento-item row d-flex align-items-center">
-                <div class="col-8">
-                <p class="fs-6 text-success mb-0">TITULO DE MOVIMIENTO</p>
-                <p class="text-muted mt-0" style="font-size: 0.8rem;">fecha dd/mm/yyyyy</p>
+  <?php foreach($movimientos as $movimiento): ?>
+    <div class="movimiento-item row d-flex align-items-center">
+    <div class="col-8">
+    <?php if($movimiento['tipo'] == "retiro" OR $movimiento['tipo'] == "transferencia"  OR $movimiento['tipo'] == "pago"):?>
+      <p class="fs-6 text-danger mb-0"><?php echo $movimiento['descripcion']?></p><!--1-->
+      <?php elseif($movimiento['tipo'] == "abono" OR $movimiento['tipo'] == "deposito"): ?>
+        <p class="fs-6 text-success mb-0"><?php echo $movimiento['descripcion']?></p><!--1-->
+        <?php endif;?>
+        <p class="text-muted mt-0" style="font-size: 0.8rem;"><?php echo $movimiento['fecha']?></p><!--2-->
+        </div>
+        <div class="col-1">
+          <?php if($movimiento['tipo'] == "retiro" OR $movimiento['tipo'] == "transferencia"  OR $movimiento['tipo'] == "pago"):?>
+                    <p class="fs-4 text-danger">-$<?php echo $movimiento['monto'];?></p><!--1-->
+                <?php elseif($movimiento['tipo'] == "abono" OR $movimiento['tipo'] == "deposito"): ?>
+                  <p class="fs-4 text-success">+$<?php echo $movimiento['monto'];?></p><!--1-->
+                  <?php endif;?>
                 </div>
-                <div class="col-1">
-                    <p class="fs-4">$5.00</p>
-                </div>
-            </div>
-            <div class="movimiento-item row d-flex align-items-center">
-                <div class="col-8">
-                <p class="fs-6 text-danger mb-0">TITULO DE MOVIMIENTO</p>
-                <p class="text-muted mt-0" style="font-size: 0.8rem;">fecha dd/mm/yyyyy</p>
-                </div>
-                <div class="col-1">
-                    <p class="fs-4">$5.00</p>
-                </div>
-            </div>    
+        </div>
+        <hr class="mt-0">
+    <?php endforeach;?>   
 </main>
 </body>
 </html>

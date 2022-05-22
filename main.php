@@ -1,5 +1,5 @@
 <?php 
-$idUsuario = '2';
+$idUsuario = '1';
 $conn = new mysqli('localhost','root','','banca_en_linea');
 if($conn->connect_errno){
     die("HUBO UN PROBLEMA".$conn->connect_error);
@@ -23,6 +23,4 @@ $select_stmt->execute();
     $datos['nombre'] = $nombre;
     $datos['apellido'] = $apellido;
     $select_user_stmt->close();
-
-
 ?>
