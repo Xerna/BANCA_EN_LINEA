@@ -31,7 +31,6 @@ include('movimientos.php');
   <a href="main_view.php"><i class="bi bi-arrow-left" style="font-size: 1.25rem; color:black"></i></a>
   <h6 class="text-center "style="font-size: 1.25rem">MOVIMIENTOS</h3>
 </div>
-
 <main id="main" class="container mt-3 mx-auto shadow-sm p-3 col-11">
   <?php foreach($movimientos as $movimiento): ?>
     <div class="movimiento-item row d-flex align-items-center">
@@ -54,5 +53,7 @@ include('movimientos.php');
         <hr class="mt-0">
     <?php endforeach;?>   
 </main>
+ <!-- JavaScript Bundle with Popper-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

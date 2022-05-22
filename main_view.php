@@ -58,7 +58,7 @@ include('main.php')
         <div class="bg-success d-flex justify-content-center align-items-center" style="height: 3.5rem; width: 3.5rem;border-radius:50%;">
         <i class="bi bi-wallet" style="font-size: 2rem; color:white"></i>
         </div>
-        <p class="fw-lighter mt-3 text-center" style="font-size: 0.8rem;">RETIRO SIN TARJETA</p>
+        <p class="fw-lighter mt-3 text-center" style="font-size: 0.8rem;"><a href="retiro_view.php" class="text-decoration-none text-black">RETIRO SIN TARJETA</a></p>
         </div>
       </div>
       </div>
