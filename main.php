@@ -13,7 +13,7 @@ $select_stmt->execute();
     $datos['nCuenta'] = $numeroCuenta;
     $datos['fondos'] = $fondos;
     $select_stmt->close();
-
+    
     $select_user_stmt = $conn->prepare("SELECT * FROM usuarios WHERE idUsuario = ?");
     $select_user_stmt->bind_param('s',$idUsuario);
     $select_user_stmt->execute();
