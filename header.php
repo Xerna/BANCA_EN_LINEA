@@ -16,7 +16,10 @@ include('main.php')
   <div class="container-fluid d-flex flex-column col-8 mx-auto">
     <a class="navbar-brand text-light pb-0 mb-0">BANCA EN LINEA</a>
     <ul class="navbar-nav text-light">
-        <li class="nav-item dropdown">
+      <li class="nav-link">
+      <a href="main_view.php" style="color:white; font-size:1.25rem;" ><i class="bi bi-arrow-left"></i></a>
+      </li>&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item dropdown">  
           <a class="nav-link dropdown-toggle text-light d-flex align-items-center justify-content-between" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <span class="pr-3"><?php echo $datos['nombre']." ".$datos['apellido'];?></span>&nbsp;&nbsp;
           <i class="bi bi-person-circle" style="font-size: 1.2rem; color:white"></i>

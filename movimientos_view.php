@@ -2,8 +2,7 @@
 include('movimientos.php');
 include('header.php');
 ?>
-<div class="tittle mt-3 h-4 d-flex justify-content-evenly">
-  <a href="main_view.php"><i class="bi bi-arrow-left" style="font-size: 1.25rem; color:black"></i></a>
+<div class="tittle mt-3 h-4">
   <h6 class="text-center "style="font-size: 1.25rem">MOVIMIENTOS</h3>
 </div>
 <main id="main" class="container mt-3 mx-auto shadow-sm p-3 col-11">
