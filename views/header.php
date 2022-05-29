@@ -1,5 +1,16 @@
-<?php 
-include('main.php')
+<?php
+session_start();
+$idUsuario = $_SESSION['user_id'];
+include('../conn.php');
+$select_user_stmt = $conn->prepare("SELECT nombre,apellido FROM users WHERE id_usuario = ?");
+$select_user_stmt->bind_param('s',$idUsuario);
+$select_user_stmt->execute();
+$select_user_stmt->store_result();
+$select_user_stmt->bind_result($nombre,$apellido);
+$select_user_stmt->fetch();
+$datos['nombre'] = $nombre;
+$datos['apellido'] = $apellido;
+$select_user_stmt->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">

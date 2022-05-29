@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $message = "";
 if(isset($_POST['submit'])){
     if(empty($_POST['user']) OR empty($_POST['pass'])){
@@ -21,10 +22,8 @@ if(isset($_POST['submit'])){
                 $user_data['user'] = $db_user;
                 $user_data['pass'] = $db_pass;
             }
-            echo $user_data['id'];
-            echo $user_data['user'];
-            echo $user_data['pass'];
-            if($pass == $user_data['pass']){
+            if(password_verify($pass,$user_data['pass'])){
+                $_SESSION['user_id'] = $user_data['id'];
                 header('Location: main_view.php');
             }else{
                 $message = "contraseña incorrecta";

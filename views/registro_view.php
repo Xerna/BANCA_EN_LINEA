@@ -1,5 +1,5 @@
 <?php 
-
+include('../registro.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,16 +12,22 @@
     <title>BANCA EN LINEA</title>
 </head>
 <body>
+  <?php echo $message;?>
   <div class="container mx-auto bg-dark">
     <p class="navbar-brand text-light py-3 mb-0 pl-3 text-center bg-dark">BANCA EN LINEA</p>
   </div>
   <p class="text-center mt-5 mb-0 fs-1">REGISTRARSE</p>
   <main id="main" class="col-10 mx-auto pt-5 text-center shadow pb-4" style="margin-top: 2rem;">
       <form method="post">
-          <input type="text" placeholder="usuario" class="mb-3 p-2" name="user" id="user">
-          <input type="password" placeholder="contraseña" class="mb-3 p-2" name="pass" id="pass">
-          <input type="password" placeholder="repita su contraseña" class="mb-3 p-2" name="pass_2" id="pass_2">
-          <input type="submit" value="Registrarse" name="submit" class="btn bg-success text-white mb-3">
+          <input type="text" placeholder="USUARIO" class="mb-3 p-2" name="user" id="user">
+          <input type="text" placeholder="PRIMER NOMBRE" class="mb-3 p-2" name="p_nombre" id="p_nombre">
+          <input type="text" placeholder="SEGUNDO NOMBRE" class="mb-3 p-2" name="s_nombre" id="s_nombre">
+          <input type="text" placeholder="APELLIDO" class="mb-3 p-2" name="p_apellido" id="p_apellido">
+          <input type="text" placeholder="SEGUNDO APELLIDO" class="mb-3 p-2" name="s_apellido" id="s_apellido">
+          <input type="text" placeholder="NUMERO DE DUI: 01234567-8" class="mb-3 p-2" name="s_apellido" id="s_apellido">
+          <input type="password" placeholder="CONTRASEÑA" class="mb-3 p-2" name="pass" id="pass">
+          <input type="password" placeholder="REPITA SU CONTRASEÑA" class="mb-3 p-2" name="pass2" id="pass2">
+          <input type="submit" value="Registrarse" name="submit" id="submit" class="btn bg-success text-white mb-3">
       </form>
       <p class="text-decoration-none text-secondary mt-3 mb-0">¿Ya tienes una cuenta?</p>
       <a href="../login_view.php"  style="font-size: 0.8rem;">Iniciar Sesion</a>

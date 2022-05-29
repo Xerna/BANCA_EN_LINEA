@@ -1,5 +1,5 @@
 <?php 
-include('login.php');
+include('../login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@ include('login.php');
         <p class="text-danger text-center mt-5"><?php echo $message; ?></p>
     <?php endif;?>  
   <main id="main" class="col-10 mx-auto bg-lighter pt-5 text-center" style="margin-top: 3rem;">
-      <form method="post">
+      <form action="" method="post">
           <input type="text" placeholder="usuario" class="mb-3 p-2" name="user" id="user">
           <input type="password" placeholder="*******" class="mb-3 p-2" name="pass" id="pass">
           <input type="submit" value="Iniciar Sesion" name="submit" class="btn bg-success text-white mb-3">

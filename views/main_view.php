@@ -1,5 +1,6 @@
 <?php 
 include('header.php');
+include('../main.php')
 ?>
     <main id="main" class="container col-10 rounded shadow mx-auto p-3 mt-5">
         <p id="numero_de_cuenta" class="fs-5 mb-0">N° CUENTA: <?php echo $datos['nCuenta'];?></p>
