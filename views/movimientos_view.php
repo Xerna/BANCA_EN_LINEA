@@ -11,7 +11,7 @@ include('../movimientos.php');
     <div class="col-8">
     <?php if($movimiento['tipo'] == "retiro" OR $movimiento['tipo'] == "transferencia"  OR $movimiento['tipo'] == "pago"):?>
       <p class="fs-6 text-danger mb-0"><?php echo $movimiento['descripcion']?></p><!--1-->
-      <?php elseif($movimiento['tipo'] == "abono" OR $movimiento['tipo'] == "deposito"): ?>
+      <?php elseif($movimiento['tipo'] == "prestamo" OR $movimiento['tipo'] == "deposito"): ?>
         <p class="fs-6 text-success mb-0"><?php echo $movimiento['descripcion']?></p><!--1-->
         <?php endif;?>
         <p class="text-muted mt-0" style="font-size: 0.8rem;"><?php echo $movimiento['fecha']?></p><!--2-->
@@ -19,7 +19,7 @@ include('../movimientos.php');
         <div class="col-1">
           <?php if($movimiento['tipo'] == "retiro" OR $movimiento['tipo'] == "transferencia"  OR $movimiento['tipo'] == "pago"):?>
                     <p class="fs-4 text-danger">-$<?php echo $movimiento['monto'];?></p><!--1-->
-                <?php elseif($movimiento['tipo'] == "abono" OR $movimiento['tipo'] == "deposito"): ?>
+                <?php elseif($movimiento['tipo'] == "prestamo" OR $movimiento['tipo'] == "deposito"): ?>
                   <p class="fs-4 text-success">+$<?php echo $movimiento['monto'];?></p><!--1-->
                   <?php endif;?>
                 </div>

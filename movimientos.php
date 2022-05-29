@@ -6,6 +6,10 @@ $stmt->execute();
 $stmt->store_result();
 $stmt->bind_result($descripcion,$monto,$fecha,$tipo,$fecha);
 $i = 0;
+$movimientos[$i]['descripcion'] = "";
+$movimientos[$i]['monto'] = "";
+$movimientos[$i]['fecha'] = "";
+$movimientos[$i]['tipo'] = "";
 $rows = $stmt->num_rows;
 if($rows>0){
     while($stmt->fetch()){

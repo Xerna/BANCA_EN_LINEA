@@ -21,13 +21,13 @@ include('../main.php')
         <div class="bg-success d-flex justify-content-center align-items-center" style="height: 3.5rem; width: 3.5rem;border-radius:50%;">
         <i class="bi bi-send" style="font-size: 2rem; color:white"></i>
         </div>
-        <p class="fw-lighter mt-3 text-center" style="font-size: 0.8rem;">TRANSFERIR</p>
+        <p class="fw-lighter mt-3 text-center" style="font-size: 0.8rem;"><a href="transferir_view.php" class="text-decoration-none text-black">TRASNFERIR</a></p>
         </div>
         <div class="option-item col-3 d-flex justify-content-center flex-column align-items-center">
         <div class="bg-success d-flex justify-content-center align-items-center" style="height: 3.5rem; width: 3.5rem;border-radius:50%;">
         <i class="bi bi-bank2" style="font-size: 2rem; color:white"></i>
         </div>
-        <p class="fw-lighter mt-3 text-center" style="font-size: 0.8rem;">SOLICITAR PRESTAMO</p>
+        <p class="fw-lighter mt-3 text-center" style="font-size: 0.8rem;"><a href="prestamo_view.php" class="text-decoration-none text-black">SOLICITAR PRESTAMO</a></p>
         </div>
         <div class="option-item col-3 d-flex justify-content-center flex-column align-items-center">
         <div class="bg-success d-flex justify-content-center align-items-center" style="height: 3.5rem; width: 3.5rem;border-radius:50%;">

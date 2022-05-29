@@ -26,5 +26,5 @@ include('../login.php');
           <input type="submit" value="Iniciar Sesion" name="submit" class="btn bg-success text-white mb-3">
       </form>
       <p class="text-decoration-none text-secondary mt-3 mb-0">¿No tienes una cuenta?</p>
-      <a href="views/registro_view.php" class="" style="font-size: 0.8rem;">Registrate ahora</a>
+      <a href="registro_view.php" class="" style="font-size: 0.8rem;">Registrate ahora</a>
   </main>

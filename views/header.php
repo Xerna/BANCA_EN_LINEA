@@ -25,7 +25,7 @@ $select_user_stmt->close();
 <body>
 <nav class="navbar bg-dark navbar-expand pb-0">
   <div class="container-fluid d-flex flex-column col-8 mx-auto">
-    <a class="navbar-brand text-light pb-0 mb-0">BANCA EN LINEA</a>
+    <a href="main_view.php" class="navbar-brand text-light pb-0 mb-0 text-decoration-none">BANCA EN LINEA</a>
     <ul class="navbar-nav text-light">
         <li class="nav-item dropdown">  
           <a class="nav-link dropdown-toggle text-light d-flex align-items-center justify-content-between" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
