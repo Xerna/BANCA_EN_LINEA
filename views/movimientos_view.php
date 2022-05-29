@@ -1,6 +1,6 @@
 <?php 
-include('movimientos.php');
 include('header.php');
+include('../movimientos.php');
 ?>
 <div class="tittle mt-3 h-4">
   <h6 class="text-center "style="font-size: 1.25rem">MOVIMIENTOS</h3>

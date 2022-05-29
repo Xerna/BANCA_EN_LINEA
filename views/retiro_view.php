@@ -16,7 +16,7 @@ include('header.php');
     </div>
   </div>
   <div class="container d-flex justify-content-center col-10 mt-4">
-    <button class="btn btn-success px-5">GENERAR CODIGO</button>
+    <input type="submit" class="btn btn-success px-5" name="submit" id="submit"></input>
   </div>
 </form>
 <!-- JavaScript Bundle with Popper-->

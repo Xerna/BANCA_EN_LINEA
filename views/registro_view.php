@@ -12,11 +12,12 @@ include('../registro.php')
     <title>BANCA EN LINEA</title>
 </head>
 <body>
-  <?php echo $message;?>
+
   <div class="container mx-auto bg-dark">
     <p class="navbar-brand text-light py-3 mb-0 pl-3 text-center bg-dark">BANCA EN LINEA</p>
   </div>
   <p class="text-center mt-5 mb-0 fs-1">REGISTRARSE</p>
+  <p class="text-center mt-2 text-success"><?php echo $message;?></p>
   <main id="main" class="col-10 mx-auto pt-5 text-center shadow pb-4" style="margin-top: 2rem;">
       <form method="post">
           <input type="text" placeholder="USUARIO" class="mb-3 p-2" name="user" id="user">
