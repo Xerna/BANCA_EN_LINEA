@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-05-2022 a las 05:57:19
+-- Tiempo de generación: 29-05-2022 a las 04:27:23
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -29,17 +29,15 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cuentas` (
   `idCuenta` varchar(12) NOT NULL,
-  `fondos` varchar(12) NOT NULL,
-  `idUsuario` varchar(12) NOT NULL
+  `fondos` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `cuentas`
 --
 
-INSERT INTO `cuentas` (`idCuenta`, `fondos`, `idUsuario`) VALUES
-('30405073', '5.00', '2'),
-('30405074', '89', '1');
+INSERT INTO `cuentas` (`idCuenta`, `fondos`) VALUES
+('RC06192930-6', '0.00');
 
 -- --------------------------------------------------------
 
@@ -69,22 +67,24 @@ INSERT INTO `movimientos` (`idMovimiento`, `descripcion`, `monto`, `tipo`, `fech
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE `usuarios` (
-  `idUsuario` varchar(12) NOT NULL,
-  `nombre` text NOT NULL,
-  `apellido` text NOT NULL
+CREATE TABLE `users` (
+  `id_usuario` varchar(15) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `pass` varchar(250) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `apellido` varchar(100) NOT NULL,
+  `numeroDUI` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `usuarios` (`idUsuario`, `nombre`, `apellido`) VALUES
-('1', 'CAROLINA', 'CERNA'),
-('2', 'CARMEN ', 'JUAREZ ');
+INSERT INTO `users` (`id_usuario`, `usuario`, `pass`, `nombre`, `apellido`, `numeroDUI`) VALUES
+('RC06192930-6', 'rcerna', '$2y$10$72J7GITVOobNuU/ncoNesORH2XFoLBYeQaifzgBMKSD.fT97ytSSq', 'RICARDO', 'CERNA', '06192930-6');
 
 --
 -- Índices para tablas volcadas
@@ -103,10 +103,10 @@ ALTER TABLE `movimientos`
   ADD PRIMARY KEY (`idMovimiento`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indices de la tabla `users`
 --
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`idUsuario`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_usuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
