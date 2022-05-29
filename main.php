@@ -1,6 +1,6 @@
 <?php 
 include('../conn.php');
-$stmt = $conn->prepare("SELECT * FROM cuentas WHERE idUsuario = ?");
+$stmt = $conn->prepare("SELECT * FROM cuentas WHERE idCuenta = ?");
 $stmt->bind_param('s',$idUsuario);
 $stmt->execute();
 $stmt->store_result();
