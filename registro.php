@@ -1,5 +1,6 @@
 <?php 
 $message = "";
+include('conn.php');
 if(isset($_POST['submit'])){
     if(empty($_POST['user']) OR empty($_POST['pass']) OR empty($_POST['pass2'])){
         $message = "Favor rellenar todos los campos";
@@ -14,7 +15,7 @@ if(isset($_POST['submit'])){
         $id = $nombre[0].$apellido[0].$DUI;
         if($pass == $pass_confirm){
             $password = password_hash($pass,PASSWORD_BCRYPT);
-            require('conn.php');
+       
             $stmt = $conn->prepare("INSERT INTO users (id_usuario,usuario,pass,nombre,apellido,numeroDUI) VALUES (?,?,?,?,?,?)");
             $stmt->bind_param('ssssss',$id,$user,$password,$nombre,$apellido,$DUI);
             if($stmt->execute()){
@@ -22,10 +23,11 @@ if(isset($_POST['submit'])){
             }else{
                 $message = "Ha ocurrido un error favor intentarlo mas tarde";
             }
+            $stmt->close();
         }else{
-            $message = "Las contraseñas no coinciden!";
+            $message = "las contraseñas no coinciden";
         }
-        $stmt->close();
+   
         $create_account_stmt = $conn->prepare("INSERT INTO cuentas (idCuenta,fondos) VALUES (?,?)");
         $numeroCuenta = $id;
         $fondos = "0.00";
